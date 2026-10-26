@@ -1,27 +1,24 @@
 package org.iesalandalus.tema1.ejercicio2;
 
-import org.iesalandalus.programacion.utilidades.Entrada;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class TransformadorTxt {
 
-    public static void main(String[] args){
-        // variable bandera para controlar cuándo termina el bucle
-        boolean terminado = false;
+    public static void main(String[] args) {
+        try {
 
-        // Bucle principal que lee mientras no se reciba la palabra (fin)
-            while (!terminado) {
-                String mensajeTexto = Entrada.cadena();
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            String linea;
 
-                // Comprobamos si la entrada ha finalizado (null) o si el texto es (fin)
-                if (mensajeTexto == null || mensajeTexto.toLowerCase().equals("fin")) {
-                    terminado = true;
-                } else {
-                    // Transformamos el texto a mayúsculas
-                    String mensajeTextoMayuscula = mensajeTexto.toUpperCase();
-                    //  Imprimimos el resultado por la salida estándar
-                    System.out.println(mensajeTextoMayuscula);
-                }
+            while ((linea = br.readLine()) != null) {
+                System.out.println(linea.toUpperCase());
             }
+        } catch (IOException e) {
+            System.out.println("Error en el proceso hijo: " + e.getMessage());
+        }
     }
 
 }
