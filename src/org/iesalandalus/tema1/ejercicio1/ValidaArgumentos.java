@@ -19,7 +19,7 @@ public class ValidaArgumentos {
                 System.out.println("Número menor que 0...");
                 System.exit(3);
             } else {
-                System.out.println("Número mayor o igual que 0");
+                System.out.println("Número mayor o igual que 0...");
                 System.exit(4);
             }
 
