@@ -16,7 +16,7 @@ public class Visualizador {
 
         // Comprobamos que la cadena estavacia
         if (cadena.isEmpty() || cadena.equals("")) {
-            System.out.println("Cadena introducida vacía");
+            System.out.println("Cadena introducida vacia");
             System.exit(1);
         } else {
             // Bucle para mostrarla las veces indicadas
